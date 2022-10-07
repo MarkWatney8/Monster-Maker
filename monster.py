@@ -18,6 +18,16 @@ class Monster:
         self.damage = damage
         self.speed  = speed
 
+
+    def __str__(self):
+        return f"""
+    Name: {self.name}
+    Health: {self.health}
+    AC: {self.ac}
+    Damage: {self.damage}
+    Speed: {self.speed} ft.
+        """
+
     
     def generate_random_health(self):
         self.health = randrange(1, 81)
@@ -33,3 +43,7 @@ class Monster:
 
     def generate_random_speed(self):
         self.speed = randrange(10, 50, 10)
+
+
+m = Monster()
+print(m)
