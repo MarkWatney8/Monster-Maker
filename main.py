@@ -1,6 +1,10 @@
-import monster
-import class_to_csv
+from monster import Monster
+from class_to_csv import to_file
 
+
+
+m = Monster()
+to_file(object=m)
 
 test = input("This is a test input. ")
 
