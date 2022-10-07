@@ -33,7 +33,3 @@ class Monster:
 
     def generate_random_speed(self):
         self.speed = randrange(10, 50, 10)
-
-
-
-

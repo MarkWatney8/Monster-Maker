@@ -1,13 +1,20 @@
 from csv import writer
 
 
-def to_file(file="monsters.csv", object=None):
-    with open(file, "a", newline='\n') as f:
-        if object:
-            data = vars(object).values()
-            write = writer(f)
-            write.writerow(data)
-        else:
-            print("No object!")
+def to_file(file_name="monsters.csv", object=None):
+
+    if object == None:
+        print("No object!")
+        return
+
+    with open(file_name, "a") as file:
+    
+        object_parameters = vars(object).values()
+        write = writer(file)
+        write.writerow(object_parameters)
+
+    file.close()
+
+
 
 
