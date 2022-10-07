@@ -4,7 +4,7 @@ import random
 class Monster:
 
 
-    def __init__(self, name="Gourge", health=15, ac=12, damage=8, speed=30):
+    def __init__(self, name="Gourge", health=random.randrange(1, 81), ac=random.randrange(10, 25), damage=random.randrange(2, 20, 2), speed=random.randrange(10, 50, 10)):
         self.name = name
         self.health = health
         self.ac = ac
